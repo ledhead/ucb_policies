@@ -25,6 +25,7 @@ class UCB:
         return np.argmax(scores)
     
     def update(self, i, r, t):
+        # update the model with reward r obtained for arm i at time step t
         if r == 1:
             self.s[i] += 1
             self.R += 1
